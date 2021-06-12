@@ -3,17 +3,84 @@
   flex-direction: column;
 }
 
+.loading {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+table > tbody {
+  height: 614px;
+}
+
+table > tbody > tr > td {
+  text-align: center;
+}
+
 .tableWrapper {
   color: #fff;
-  border-collapse: collapse !important;
   border-color: white;
   display: flex;
   flex: 1;
+  justify-content: center;
+  padding: 20px;
+}
+
+.tableContent {
+  width: 50%;
+}
+
+.tableHeader {
+  opacity: 0.6;
 }
 
 .amount {
   text-align: right;
   direction: rtl;
+}
+
+.footer {
+  width: 700px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #fff;
+  cursor: pointer;
+  height: 32px;
+  line-height: 28px;
+  font-size: 0.9rem;
+  border: 1px solid rgba(100, 100, 100, 0.3);
+}
+
+.leftButtons {
+  display: flex;
+  flex: 2;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+.rightButtons {
+  display: flex;
+  flex: 3;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 20px;
 }
 
 .button {
